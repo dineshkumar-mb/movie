@@ -18,7 +18,7 @@ router.post('/',(req,res)=>{
 // E
 
 router.put('/:id',(req,res)=>{
-    res.send("Update a movie ");
+    res.send("Update a movie "); 
 });
 
 // D
