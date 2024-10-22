@@ -6,7 +6,11 @@
 
    // C create
    export const CreateMovie = (req,res)=>{
-    res.send("Create a movie ");
+      //id,title,desc
+      console.log(req.body);
+      return res.json(req.body);
+      
+   
    };
 
    // E update
