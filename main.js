@@ -1,8 +1,14 @@
 import express from "express";
 
 import moviesRoutes from "./routes/moviesRoutes.js";
+import { connect } from "mongoose";
+import connectDB from "./lib/db.js";
 const app =express();
 const PORT=6969;
+
+// connect DB
+
+connectDB();
 app.get ('/',(req, res)=>{
     res.json({msg:"hello students!!"});
 });

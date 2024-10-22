@@ -1,5 +1,5 @@
 import express from "express";
-import { CreateMovie, DeleteMovie, UpdateMovie,MovieIndex } from "../controllers/moviesController";
+import { CreateMovie, DeleteMovie, UpdateMovie,MovieIndex } from "../controllers/moviesController.js";
 const router = express.Router();
 // crud functionality of movies
 
