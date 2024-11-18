@@ -9,12 +9,12 @@ if (!process.env.STRIPE_SECRET_KEY) {
 }
 
 router.post('/payment', async (req, res) => {
-  const { amount, currency } = req.body;
+  const { amount } = req.body; // Removed 'currency'
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount, // amount in cents
-      currency: 'inr', // Ensure currency is a string
+      currency: 'inr', // Hardcoded to 'inr'
     });
     res.status(200).send({
       clientSecret: paymentIntent.client_secret,
